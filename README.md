@@ -10,7 +10,7 @@ This is a sample application that shows how to use EJS for templating in a Node.
 ## Installation
 
 ```bash
-git clone git@github.com:ratracegrad/nodejs_ejs_boilerplate.git
+git clone git@github.com:webdeveloper82/front_middle_end_test.git
 npm install
 node server.js
 ```
