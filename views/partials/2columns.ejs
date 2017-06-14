@@ -1,0 +1,40 @@
+<!-- views/partials/3columns.ejs -->
+<section name="content" style="height:100%">
+    <div class="container" style="position:relative;height:100%">
+        <div id="firstPanel" class="col-xs-12 col-md-3" style="background-color: #bfbfbf; height:100%;padding-left:0;padding-right:0">
+            <span style="width:100%;height:50%">&nbsp;&nbsp;<br><br></span>
+            <span style="width:100%;height:100%">
+                <button id="btnOption" style="width:100%">Option</button>
+            </span>
+            <span style="width:100%;height:30%">&nbsp;</span>
+            <span style="width:100%;height:30%;" align="center">
+                    <p>Quantity</p>
+                    <input id="itemCount" type=text value=5 style="width:100%""/>
+            </span>
+            <p>Ob1</p>
+        </div>
+
+        <div  class="col-xs-12 col-md-9" style="padding-top=0;background-color: #afabab;padding-left:0;padding-right:0;z-index:40;height:100%">
+            <div class="col-xs-12 col-md-2" style="background-color:#afabab; position:absolute;z-index:10;display:none;height:100%" id="option-panel">
+            <span style="width:100%;height:30%">&nbsp;</span>
+            <p class="text-center text-muted"><br></p>
+                <select id="AB" style="width:100%">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-12" style="background-color: #e7e6e6;position:relative;height:100%">
+            <span style="width:100%;height:30%">&nbsp;</span>
+            <div id="contentPanel" class="col-xs-12 col-md-12" style="background-color: #e7e6e6;position:relative;height:50%">
+            </div>
+            <input type="text" style="display:none" value=0 id="curPageNum"/>
+            <div id="nav" class="col-xs-12 col-md-12" align="center" style="background-color: #e7e6e6;position:relative;height:50%">
+                <a href="javascript:prevPage()"><</a>&nbsp;&nbsp;&nbsp;<a href="javascript:nextPage()">></a>
+            </div>
+            <p>Ob3</p>            
+        </div>
+        </div>        
+    </div>
+</section>
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <% include ../partials/head %>
+
+    <body>
+
+
+        <section name="jumbotron"  >
+            &nbsp;
+        </section>
+
+        <% include ../partials/2columns %>
+
+        
+
+        <% include ../partials/scripts %>
+
+    </body>
+
+</html>
+<script>
+    function toggleOptionPanel(){
+        $("#option-panel").animate({
+                width: "toggle"
+            });return;
+    }
+    $(document).ready(function () {
+        $('#AB').click(function(){
+            showPage(0);
+        })
+        $("#btnOption").click(function(){
+            toggleOptionPanel();
+        });
+        $(document).click(function(event){
+            //alert($(this).attr('id'));
+            //alert(event.target.id);
+            if(event.target.id == "" || event.target.id == "btnOption" || event.target.id == "AB" || event.target.id == "itemCount" || event.target.id == "option-panel")
+                return;
+            //console.log($(this));
+            if(document.getElementById("option-panel").style.overflow=="")
+            $("#option-panel").fadeOut();
+        });
+        $("#pagenum").val("0");
+        
+    });
+    function showPage(pagenum){
+        var i=0;
+        $("#contentPanel").empty();
+        var itemCount=$("#itemCount").val();
+        var count=0;
+        if(itemCount!="")
+            count=parseInt(itemCount);
+        //alert(count);
+        //alert(pagenum);
+        for(i=pagenum*3;i<(count<pagenum*3+3?count:pagenum*3+3);i++)
+        {
+            $("#contentPanel").append("<div class='col-xs-12 col-md-12' style='width:100%;color:#000;background-color:#898989' va><div class='col-xs-12 col-md-2' id='circle' style='width:50;align=center'>"+"<h4>"+(i+1)+"</h4>"+"</div><div class='col-xs-12 col-md-10'  align='center'><h4>Item "+ $('#AB').val()+(i+1)+"</div></div>");
+            $("#contentPanel").append("<div class='col-xs-12 col-md-12'>&nbsp;</div>");
+        }
+    }
+    function nextPage(){
+        var pagenumStr=$("#curPageNum").val();
+        var pagenum1=parseInt(pagenumStr);
+        var itemnumStr=$("#itemCount").val();
+        var item_c1=parseInt(itemnumStr);
+        pagenum1=pagenum1+1;
+        //alert(pagenum1);
+        if(pagenum1*3>=item_c1)            
+            $("#curPageNum").val(""+(pagenum1-1));
+        else{
+            showPage(pagenum1);
+            $("#curPageNum").val(""+pagenum1);
+        }
+    }
+    function prevPage(){
+        var pagenumStr=$("#curPageNum").val();
+        var pagenum=parseInt(pagenumStr);
+        //alert(pagenum);
+        pagenum=pagenum-1;
+        if(pagenum<0)
+            pagenum=0;
+        $("#curPageNum").val(""+pagenum);
+        showPage(pagenum);
+    }
+</script>
+
+<!-- views/partials/3columns.ejs -->
