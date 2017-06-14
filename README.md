@@ -18,10 +18,10 @@ node server.js
 ## Screenshots
 
 When you start the application you will see this for the First page
-![Home Page](/screenshots/FirstPage.png?raw=true "First Page")
+![First Page](/screenshots/FirstPage.png?raw=true "First Page")
 
 It shows you the screen of running
-![Home Page](/screenshots/FirstPage.png?raw=true "Running")
+![Second Page](/screenshots/Second.png?raw=true "Running")
 
 The third page shows the design.
-![About Page](/screenshots/about.png?raw=true "Design status")
+![Third Page](/screenshots/Third.png?raw=true "Design status")
