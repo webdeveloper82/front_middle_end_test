@@ -1,8 +1,5 @@
-# Boilerplate for EJS Templating in Node.js Application
+# Front/Middle End Test For No A2 Application
 This is a sample application that shows how to use EJS for templating in a Node.js application. It shows how to use partials which allows you to repeat different items on multiple pages of your application.
-
-## Live Demonstration
-[You can view this app in production here](https://nodejs-esj-boilerplate.herokuapp.com/)
 
 ## Requirements
 
@@ -20,8 +17,11 @@ node server.js
 
 ## Screenshots
 
-When you start the application you will see this for the home page
-![Home Page](/screenshots/home.png?raw=true "Home Page")
+When you start the application you will see this for the First page
+![Home Page](/screenshots/FirstPage.png?raw=true "First Page")
 
-The About page looks like this
-![About Page](/screenshots/about.png?raw=true "About Page")
+It shows you the screen of running
+![Home Page](/screenshots/FirstPage.png?raw=true "Running")
+
+The third page shows the design.
+![About Page](/screenshots/about.png?raw=true "Design status")
